@@ -1,5 +1,5 @@
 {
-  "name": "yourname/php-azure-deployment",
+  "name": "onsatig/php-azure-deployment",
   "autoload": {
       "psr-4": {
           "App\\": "src/"
