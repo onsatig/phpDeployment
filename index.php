@@ -1,2 +1,5 @@
+
 <?php
-echo "Hello, Azure!";
+include './tests/CallName.php';
+
+echo greet("Ons");
