@@ -1,4 +1,4 @@
 
 <?php
 
-echo greet("Ons");
+echo ("Ons");
