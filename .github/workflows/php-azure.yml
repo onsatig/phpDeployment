@@ -61,7 +61,9 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ env.DOCKER_IMAGE }}:latest
+          tags: |
+           ${{ env.DOCKER_IMAGE }}:latest
+           ${{ env.DOCKER_IMAGE }}:${{ github.sha }}
           no-cache: true
 
   deploy:
@@ -75,4 +77,4 @@ jobs:
         with:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          images: ${{ env.DOCKER_IMAGE }}:latest
+          images: ${{ env.DOCKER_IMAGE }}:${{ github.sha }}
